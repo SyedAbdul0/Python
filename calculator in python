@@ -1,0 +1,21 @@
+# making a calculator 
+input1 = input("enter your value")
+input2= input("enter your second value")
+
+input3 = input("enter your operator ")
+result = 0 
+input1 = int(input1)
+input2 = int(input2)
+
+if input3 == "+" : 
+    result = input1+ input2
+    print(result)
+elif input3 =="-" : 
+         result = input1-input2
+         print(result)
+elif input3== "/": 
+             result = input1/input2
+             print(result)
+else : 
+                 print("operator didn't matched")
+    
