@@ -1,0 +1,59 @@
+#kbc game
+
+#questions stored in list 
+questions = [
+    ["which language was used to make facebook","python","french","javascript","php","none",4]
+    ,
+      ["which language was used to make facebook","python","french","javascript","php","none",4]
+      ,  
+      ["which language was used to make facebook","python","french","javascript","php","none",4]
+      ,
+        ["which language was used to make facebook","python","french","javascript","php","none",4]
+        ,
+        ["which language was used to make facebook","python","french","javascript","php","none",4]
+        ,
+         ["which language was used to make facebook","python","french","javascript","php","none",4]
+    ,
+      ["which language was used to make facebook","python","french","javascript","php","none",4]
+      ,  
+      ["which language was used to make facebook","python","french","javascript","php","none",4]
+      ,
+        ["which language was used to make facebook","python","french","javascript","php","none",4]
+        ,
+        ["which language was used to make facebook","python","french","javascript","php","none",4]
+    ]
+    
+    
+money = 10000
+
+levels = [1000,2000,3000,5000,10000,20000,40000,80000,160000,320000]
+
+#using for loop to initialize the game and control it's questions.
+for i in range(0,len(questions)):
+    question = questions[i]
+    
+    print(f"so the question for {levels[i]} rupees: ")
+    print(question[0])
+    print(f"a){question[1]}       b){question[2]}")
+    print(f"c){question[3]}       d){question[4]}")
+    
+    reply = int(input("choose an option from 0 -4"))
+    
+    if (reply == 0 ):
+        print("your game quits")
+        money = levels[i-1]
+        break
+    if(reply ==question[-1]):
+        print(f"you entered the right option and you have won {levels[i]}")
+        if(i==4):
+            money =10000
+        elif(reply ==9):
+            print("you entered the right option")
+            money =32000
+    else :
+        print("you have entered the wrong option")
+        break
+    
+    
+    print(f"your take home money is {money}")
+    
